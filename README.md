@@ -26,7 +26,7 @@ export PYTHONPATH=/path/to/bskit:$PYTHONPATH
 
 ## Usage
 
-Usage instructions and a guide to the included examples can be found [here]()
+Usage instructions and a guide to the included examples can be found [here](https://github.com/sjforeman/bskit/blob/master/usage.md)
 
 ## References
 
