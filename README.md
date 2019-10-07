@@ -14,11 +14,11 @@ This package uses the FFT-based bispectrum measurement algorithm presented e.g. 
 
 (see below for further references), and was first used for the bispectrum measurements in the following paper:
 
-> Foreman et al., *Baryonic effects on the matter bispectrum*, 2019, arXiv:19mm.xxxxx
+> Foreman, Coulton, Villaescusa-Navarro, and Barreira, *Baryonic effects on the matter bispectrum*, 2019, arXiv:19mm.xxxxx
 
 ## Installation
 
-`bskit`’s main dependency is on `nbodykit`. After following the `nbodykit` [installation instructions](https://nbodykit.readthedocs.io/en/latest/getting-started/install.html) (preferably via `conda`), all `bskit` dependencies will also be installed. At this point, simply clone this repository and ensure that the root `bskit` directory is in your `PYTHONPATH`, e.g. via 
+`bskit` requires Python 3; otherwise, its main dependency is on `nbodykit`. After following the `nbodykit` [installation instructions](https://nbodykit.readthedocs.io/en/latest/getting-started/install.html) (preferably via `conda`), all `bskit` dependencies will also be installed. At this point, simply clone this repository and ensure that the root `bskit` directory is in your `PYTHONPATH`, e.g. via 
 
 ``
 export PYTHONPATH=/path/to/bskit:$PYTHONPATH
@@ -26,13 +26,13 @@ export PYTHONPATH=/path/to/bskit:$PYTHONPATH
 
 ## Usage
 
-Usage instructions and a guide to the included examples can be found [here](https://github.com/sjforeman/bskit/blob/master/usage.md)
+Usage instructions and a guide to the included examples can be found [here](https://github.com/sjforeman/bskit/blob/master/usage.md).
 
 ## References
 
 If `bskit` is used in original research, please cite the associated paper:
 
-> Foreman et al., *Baryonic effects on the matter bispectrum*, 2019, arXiv:19mm.xxxxx
+> Foreman, Coulton, Villaescusa-Navarro, and Barreira, *Baryonic effects on the matter bispectrum*, 2019, arXiv:19mm.xxxxx
 
 In addition, please cite the `nbodykit` paper,
 
