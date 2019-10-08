@@ -44,3 +44,6 @@ and the following standard references for the FFT-based bispectrum estimator tha
 
 > Sefusatti et al., *Accurate estimators of correlation functions in Fourier space*, [Mon. Not. Roy. Astron. Soc., 460, 3624 (2016)](https://dx.doi.org/10.1093/mnras/stw1229), arXiv:[1512.07295](https://arxiv.org/abs/1512.07295) 
 
+## Questions?
+
+If you have any questions or would like to contribute to this code, please open an issue or email Simon directly.
