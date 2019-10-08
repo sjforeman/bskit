@@ -22,6 +22,8 @@ For reasons of computational efficiency, measuring the bispectrum from a given s
 source set_locations.sh
 ``
 
+And also run `examples/tests/grids/scripts/generate_gaussian_test_grids.py` to generate the test grids used for these examples.
+
 1. Computing binning information: based on a specified simulation box size, Fourier grid resolution, and bispectrum binning scheme, compute the number of triangles within each bin, along with the mean k vector magnitudes within each bin, and save to disk. In cases where you will be measuring the bispectrum from multiple snapshots with the same binning scheme, this step only needs to be completed once.
 
 > Example: `examples/tests/scripts/test_compute_bs_gridinfo.sh`
