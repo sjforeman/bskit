@@ -14,7 +14,7 @@ This package uses the FFT-based bispectrum measurement algorithm presented e.g. 
 
 (see below for further references), and was first used for the bispectrum measurements in the following paper:
 
-> Foreman, Coulton, Villaescusa-Navarro, and Barreira, *Baryonic effects on the matter bispectrum*, 2019, arXiv:19mm.xxxxx
+> Foreman, Coulton, Villaescusa-Navarro, and Barreira, *Baryonic effects on the matter bispectrum*, 2019, arXiv:[1910.03597](https://arxiv.org/abs/1910.03597)
 
 ## Installation
 
@@ -32,7 +32,7 @@ Usage instructions and a guide to the included examples can be found [here](http
 
 If `bskit` is used in original research, please cite the associated paper:
 
-> Foreman, Coulton, Villaescusa-Navarro, and Barreira, *Baryonic effects on the matter bispectrum*, 2019, arXiv:19mm.xxxxx
+> Foreman, Coulton, Villaescusa-Navarro, and Barreira, *Baryonic effects on the matter bispectrum*, 2019, arXiv:[1910.03597](https://arxiv.org/abs/1910.03597)
 
 In addition, please cite the `nbodykit` paper,
 
