@@ -2030,16 +2030,32 @@ class FFTBispectrum(nbkfftpower.FFTBase):
             Nbin_sum = np.sum(comm.gather(Nbin_local))
             Nbin = comm.bcast(Nbin_sum)
 
-            # Compute mean values of k1,k2,k3 over triangle bin
-            k_mean_local[0] = np.sum(kk_fields[triple[0]] \
-                               *number_fields[triple[1]] \
-                               *number_fields[triple[2]]) / np.prod(n_mesh) / Nbin
-            k_mean_local[1] = np.sum(number_fields[triple[0]] \
-                               *kk_fields[triple[1]] \
-                               *number_fields[triple[2]]) / np.prod(n_mesh) / Nbin
-            k_mean_local[2] = np.sum(number_fields[triple[0]] \
-                               *number_fields[triple[1]] \
-                               *kk_fields[triple[2]]) / np.prod(n_mesh) / Nbin
+            # Compute mean values of k1,k2,k3 over triangle bin.
+            # This may occasionally land on an empty bin (Nbin=0), so we catch
+            # the corresponding error and set k_mean_local[0] = nan, since we won't
+            # want to use those bins anyway.
+            with np.errstate(divide='raise', invalid='raise'):
+                try:
+                    k_mean_local[0] = np.sum(kk_fields[triple[0]] \
+                                             *number_fields[triple[1]] \
+                                             *number_fields[triple[2]]) / np.prod(n_mesh) / Nbin
+                except FloatingPointError:
+                    k_mean_local[0] = np.nan
+
+                try:
+                    k_mean_local[1] = np.sum(number_fields[triple[0]] \
+                                             *kk_fields[triple[1]] \
+                                             *number_fields[triple[2]]) / np.prod(n_mesh) / Nbin
+                except FloatingPointError:
+                    k_mean_local[1] = np.nan
+                    
+                try:
+                    k_mean_local[2] = np.sum(number_fields[triple[0]] \
+                                             *number_fields[triple[1]] \
+                                             *kk_fields[triple[2]]) / np.prod(n_mesh) / Nbin
+                except FloatingPointError:
+                    k_mean_local[2] = np.nan
+                    
             for j in range(3):
                 k_mean_sum[j] = np.sum(comm.gather(k_mean_local[j]))
                 k_mean[j] = comm.bcast(k_mean_sum[j])
