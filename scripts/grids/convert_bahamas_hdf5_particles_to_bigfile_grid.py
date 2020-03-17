@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import argparse
 import h5py
 import time
+import warnings
 
 import dask.array as da
 import nbodykit.lab as nbk
@@ -146,5 +147,13 @@ elif sim_type == 'hydro' or sim_type == 'baryons':
 if not do_mass_moments_only:
     print_status(comm,start_time,'Created mesh for density grid')
     print_status(comm,start_time,'Starting paint and file output')
-    in_mesh.save(out_file,dataset='Field',mode='real')
+
+    # nbodykit may issue warnings here, because saving a mesh derived from a
+    # MultipleSpeciesCatalog will throw away information related to the individual
+    # species. As a blunt way to deal with this, we suppress warnings when saving
+    # the mesh to disk
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        in_mesh.save(out_file,dataset='Field',mode='real')
+
     print_status(comm,start_time,'Wrote grid to %s' % out_file)

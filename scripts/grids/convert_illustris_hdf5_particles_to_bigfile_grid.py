@@ -98,7 +98,13 @@ elif sim_type == 'hydro' or sim_type == 'baryons':
 
 print_status(comm,start_time,'Created mesh for density grid')
 
-# Paint grid to mesh, and save as bigfile
+# Paint grid to mesh, and save as bigfile.
+# nbodykit may issue warnings here, because saving a mesh derived from a
+# MultipleSpeciesCatalog will throw away information related to the individual
+# species. As a blunt way to deal with this, we suppress warnings when saving
+# the mesh to disk
 print_status(comm,start_time,'Starting paint and file output')
-in_mesh.save(out_file,dataset='Field',mode='real')
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    in_mesh.save(out_file,dataset='Field',mode='real')
 print_status(comm,start_time,'Wrote grid to %s' % out_file)
