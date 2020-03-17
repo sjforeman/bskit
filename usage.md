@@ -59,7 +59,7 @@ The final 3 examples don’t use anything from `bskit` specifically, instead usi
 
 ## Example batch scripts
 
-Many of the scripts in `examples/tests/scripts/` largely overlap with those in `examples/tests/scripts/`, but also include examples of converting particle snapshots into density grids that are saved to disk, or downsampling density grids to a lower resolution. Converting particles to density as a separate step, instead of directly loading the particle snapshots into `bskit` routines, can save disk space (since the density grids typically take up less) or computation time (if you expect to make multiple measurements on the same snapshot, it is more efficient to load the density grid than the raw particles each time).
+Many of the scripts in `examples/batch/` overlap with those in `examples/tests/scripts/`, but also include examples of converting particle snapshots into density grids that are saved to disk, or downsampling density grids to a lower resolution. By converting particles to density as a separate step, instead of directly loading the particle snapshots into `bskit` routines, one can save disk space (since the density grids typically take up less) or computation time (if you expect to make multiple measurements on the same snapshot, it is more efficient to load the density grid than the raw particles each time).
 
 
 ## Included general scripts
