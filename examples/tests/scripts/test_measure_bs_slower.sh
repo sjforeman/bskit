@@ -2,13 +2,13 @@
 ###
 # Example script (for command line):
 #
-# Measuring bispectrum from specified density grid in bigfile format, using faster
-# (but more memory-intensive) routine.
+# Measuring bispectrum from specified density grid in bigfile format, using slower
+# (but less memory-intensive) routine.
 ###
 
 export OMP_NUM_THREADS=1
 
-export FILE_ROOT=test_grid_512_0
+export FILE_ROOT=test_grid_512_1
 export SNAP=${BSKIT_GRID_DIR}${FILE_ROOT}.bigfile
 export OUTFILE=${BSKIT_OUT_DIR}${FILE_ROOT}_bs_kf_3kf_3lowbins_slow.dat
 

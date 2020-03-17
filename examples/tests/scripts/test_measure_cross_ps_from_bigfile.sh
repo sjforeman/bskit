@@ -7,8 +7,8 @@
 
 export OMP_NUM_THREADS=1
 
-export FILE_ROOT=test_grid_512_0
-export CROSS_FILE_ROOT=test_grid_512_1
+export FILE_ROOT=test_grid_512_1
+export CROSS_FILE_ROOT=test_grid_512_2
 
 export IN_FILE=${BSKIT_GRID_DIR}${FILE_ROOT}.bigfile
 export CROSS_IN_FILE=${BSKIT_GRID_DIR}${CROSS_FILE_ROOT}.bigfile

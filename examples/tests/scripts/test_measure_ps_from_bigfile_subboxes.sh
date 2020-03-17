@@ -7,7 +7,7 @@
 
 export OMP_NUM_THREADS=1
 
-export FILE_ROOT=test_grid_512_0
+export FILE_ROOT=test_grid_512_1
 export SUBBOX_STR=_8subboxes
 
 export IN_FILE=${BSKIT_GRID_DIR}${FILE_ROOT}.bigfile

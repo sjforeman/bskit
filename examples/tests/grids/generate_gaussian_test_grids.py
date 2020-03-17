@@ -30,7 +30,7 @@ out_file_suffix = '.bigfile'
 Lbox = 1000.
 Nmesh = 512
 z = 0
-seeds = [0,1]
+seeds = [1,2]
 
 # Set start time, and print first status message
 comm = CurrentMPIComm.get()

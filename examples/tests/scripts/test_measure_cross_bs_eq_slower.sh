@@ -8,8 +8,8 @@
 
 export OMP_NUM_THREADS=1
 
-export FILE_ROOT1=test_grid_512_0
-export FILE_ROOT2=test_grid_512_1
+export FILE_ROOT1=test_grid_512_1
+export FILE_ROOT2=test_grid_512_2
 export SNAP1=${BSKIT_GRID_DIR}${FILE_ROOT1}.bigfile
 export SNAP2=${BSKIT_GRID_DIR}${FILE_ROOT2}.bigfile
 

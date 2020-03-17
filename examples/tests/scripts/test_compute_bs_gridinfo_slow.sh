@@ -11,7 +11,7 @@
 
 export OMP_NUM_THREADS=1
 
-export SNAP=${BSKIT_GRID_DIR}test_grid_512_0.bigfile
+export SNAP=${BSKIT_GRID_DIR}test_grid_512_1.bigfile
 export NGRID=512
 export NGRIDCIC=512
 export LBOX=1000.

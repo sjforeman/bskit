@@ -8,7 +8,7 @@
 
 export OMP_NUM_THREADS=1
 
-export FILE_ROOT=test_grid_512_0
+export FILE_ROOT=test_grid_512_1
 export SNAP=${BSKIT_GRID_DIR}${FILE_ROOT}.bigfile
 export OUTFILE_PREFIX=${BSKIT_OUT_DIR}${FILE_ROOT}_unnormbs_kf_3kf_3lowbins
 
